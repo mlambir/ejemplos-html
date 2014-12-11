@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1>Ejemplos de HTML</h1>
+    <ol>
+        {% for element in elements %}
+            <li><a href="{% url "element" element.id %}">{{ element.title }}</a></li>
+        {% endfor %}
+    </ol>
+{% endblock %}
