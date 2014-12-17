@@ -4,6 +4,9 @@
 {% block body %}
     <h1>{{ element.title }}</h1>
     <a href="{% url "index" %}"> &lt; Volver</a>
+    <hr/>
+        {{ element.description | safe }}
+    <hr/>
     {% for example in element.example_set.all%}
         <h2>{{ example.title }}</h2>
         {{ example.description | safe}}
